@@ -78,7 +78,7 @@ import SupportIcon from "./icons/IconSupport.vue";
       rel="noopener"
       >Awesome Vue</a
     >
-    a visit.
+    a visit. Now visit the <RouterLink to="/about">About Page</RouterLink>
   </WelcomeItem>
 
   <WelcomeItem>
