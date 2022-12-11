@@ -1,27 +1,13 @@
-<!-- eslint-disable prettier/prettier -->
 <script setup>
-import TheWelcome from "@/components/TheWelcome.vue";
+import { useFlash } from "@/composables/useFlash.js";
 
-setTimeout(() => {
-  message = "I have been changed"
-}, 2000)
-
-// eslint-disable-next-line no-undef
-let message = $ref("Hello World");
-
-const doSomething = () => {
-  alert('do something')
-}
-
+let { flash } = useFlash();
 </script>
 
 <template>
   <main>
-    <TheWelcome />
-    {{ message }}
     <p>
-      <input type="text" v-model="message" />
-      <button v-on:click="doSomething">Click ME</button>
+      <button @click="flash('Test', 'home page')">Click me</button>
     </p>
   </main>
 </template>
